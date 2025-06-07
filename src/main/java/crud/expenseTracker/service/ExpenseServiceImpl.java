@@ -4,12 +4,14 @@ import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import crud.expenseTracker.model.Expense;
 import crud.expenseTracker.utils.ExpenseDataLoader;
 
 @Service
+@Profile("json")
 public class ExpenseServiceImpl implements ExpenseService {
 
   private static final AtomicLong idCounter = new AtomicLong();
